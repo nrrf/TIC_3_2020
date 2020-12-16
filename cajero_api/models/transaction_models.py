@@ -11,3 +11,6 @@ class TransactionOut(BaseModel):
     date: datetime
     value: int
     actual_balance: int
+
+    class Config: 
+        orm_mode = True

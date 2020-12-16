@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "766627a0-5c6d-46dc-adfd-02b26bbbe062",
+		"name": "G1M3_3_sprint2",
+		"description": "Sprint 2, Grupo conformado por: Nicolas Raul Rojas Feria, Hamilton Salazar, Camilo Giraldo, Diego Diaz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All_products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://new-ecommerce-api.herokuapp.com/productos",
+					"protocol": "https",
+					"host": [
+						"new-ecommerce-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"productos"
+					]
+				},
+				"description": "All products of the inventory"
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://new-ecommerce-api.herokuapp.com/productos/102",
+					"protocol": "https",
+					"host": [
+						"new-ecommerce-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"productos",
+						"102"
+					]
+				},
+				"description": "get a product of inventory"
+			},
+			"response": []
+		},
+		{
+			"name": "Update_product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":102,\r\n    \"quantity\": 20,\r\n    \"price\": 300,\r\n    \"discount\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://new-ecommerce-api.herokuapp.com/productos/actualizar",
+					"protocol": "https",
+					"host": [
+						"new-ecommerce-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"productos",
+						"actualizar"
+					]
+				},
+				"description": "uptdate of a product in db"
+			},
+			"response": []
+		},
+		{
+			"name": "Authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"nico\", \r\n    \"password\" : \"nico20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://new-ecommerce-api.herokuapp.com/customer/auth",
+					"protocol": "https",
+					"host": [
+						"new-ecommerce-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"customer",
+						"auth"
+					]
+				},
+				"description": "authentication of Customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Info_customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://new-ecommerce-api.herokuapp.com/customer/fullName/hamilton22",
+					"protocol": "https",
+					"host": [
+						"new-ecommerce-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"customer",
+						"fullName",
+						"hamilton22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"nico\", \r\n    \"password\": \"nico20\",\r\n    \"address\": \"calle siempre viva\", \r\n    \"numberPhone\": \"3128179999\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://new-ecommerce-api.herokuapp.com/customer/transaction",
+					"protocol": "https",
+					"host": [
+						"new-ecommerce-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"customer",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
